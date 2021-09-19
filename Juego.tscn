@@ -1,0 +1,648 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://mapa.jpg" type="Texture" id=1]
+[ext_resource path="res://Juego.gd" type="Script" id=2]
+[ext_resource path="res://super_mario_256/SuperMario256.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://botones fondo.jpg" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="imagen" type="TextureButton" parent="."]
+margin_left = 5.0
+margin_top = 7.0
+margin_right = 1048.0
+margin_bottom = 989.0
+rect_scale = Vector2( 0.67, 0.67 )
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 702.0
+margin_top = 15.0
+margin_right = 961.0
+margin_bottom = 55.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="TextureButton"]
+margin_left = 4.24268
+margin_top = 4.94975
+margin_right = 254.243
+margin_bottom = 44.9497
+custom_fonts/font = SubResource( 1 )
+text = "Opciones:"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Arma" type="TextureButton" parent="."]
+margin_left = 697.762
+margin_top = 101.876
+margin_right = 956.762
+margin_bottom = 141.876
+rect_pivot_offset = Vector2( 36.8267, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="Arma"]
+margin_left = 10.5994
+margin_top = 3.89027
+margin_right = 260.599
+margin_bottom = 43.8903
+rect_pivot_offset = Vector2( 170.314, 93.0771 )
+custom_fonts/font = SubResource( 1 )
+text = "Arma"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Personaje" type="TextureButton" parent="."]
+margin_left = 702.0
+margin_top = 200.0
+margin_right = 961.0
+margin_bottom = 240.0
+rect_pivot_offset = Vector2( 36.8267, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="Personaje"]
+margin_left = 4.24268
+margin_top = 8.0
+margin_right = 254.243
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 170.314, 93.0771 )
+custom_fonts/font = SubResource( 1 )
+text = "Personaje"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lugar" type="TextureButton" parent="."]
+margin_left = 706.243
+margin_top = 304.0
+margin_right = 965.243
+margin_bottom = 344.0
+rect_pivot_offset = Vector2( 36.8267, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="Lugar"]
+margin_left = 4.24268
+margin_top = 8.0
+margin_right = 254.243
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 170.314, 93.0771 )
+custom_fonts/font = SubResource( 1 )
+text = "Lugar
+"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="OrdBtnArma" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 698.0
+margin_top = 88.0
+margin_right = 965.0
+margin_bottom = 536.0
+input_pass_on_modal_close_click = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Soga" type="Button" parent="OrdBtnArma"]
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Soga"
+
+[node name="btn_Esposa" type="Button" parent="OrdBtnArma"]
+margin_top = 24.0
+margin_right = 267.0
+margin_bottom = 44.0
+text = "Esposa"
+
+[node name="btn_Liana" type="Button" parent="OrdBtnArma"]
+margin_top = 48.0
+margin_right = 267.0
+margin_bottom = 68.0
+text = "Liana"
+
+[node name="btn_Planta" type="Button" parent="OrdBtnArma"]
+margin_top = 72.0
+margin_right = 267.0
+margin_bottom = 92.0
+text = "Planta Carnivora"
+
+[node name="btn_Ret_Arma" type="Button" parent="OrdBtnArma"]
+margin_top = 96.0
+margin_right = 267.0
+margin_bottom = 116.0
+text = "Regresar"
+
+[node name="OrdBtPersonaje" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 698.0
+margin_top = 104.0
+margin_right = 965.0
+margin_bottom = 552.0
+input_pass_on_modal_close_click = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Mario" type="Button" parent="OrdBtPersonaje"]
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Mario"
+
+[node name="btn_Luigi" type="Button" parent="OrdBtPersonaje"]
+margin_top = 24.0
+margin_right = 267.0
+margin_bottom = 44.0
+text = "Luigi"
+
+[node name="btn_Peach" type="Button" parent="OrdBtPersonaje"]
+margin_top = 48.0
+margin_right = 267.0
+margin_bottom = 68.0
+text = "Peach"
+
+[node name="btn_Toad" type="Button" parent="OrdBtPersonaje"]
+margin_top = 72.0
+margin_right = 267.0
+margin_bottom = 92.0
+text = "Toad"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Wario" type="Button" parent="OrdBtPersonaje"]
+margin_top = 96.0
+margin_right = 267.0
+margin_bottom = 116.0
+text = "Wario"
+
+[node name="btn_Yoshi" type="Button" parent="OrdBtPersonaje"]
+margin_top = 120.0
+margin_right = 267.0
+margin_bottom = 140.0
+text = "Yoshi"
+
+[node name="btn_Valuigi" type="Button" parent="OrdBtPersonaje"]
+margin_top = 144.0
+margin_right = 267.0
+margin_bottom = 164.0
+text = "Valuigi"
+
+[node name="btn_Ret_Per" type="Button" parent="OrdBtPersonaje"]
+margin_top = 168.0
+margin_right = 267.0
+margin_bottom = 188.0
+text = "Regresar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrdBtnLugar" type="VBoxContainer" parent="."]
+visible = false
+margin_left = 698.0
+margin_top = 88.0
+margin_right = 965.0
+margin_bottom = 536.0
+input_pass_on_modal_close_click = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_SeaSide" type="Button" parent="OrdBtnLugar"]
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Sea Side"
+
+[node name="btn_IceLand" type="Button" parent="OrdBtnLugar"]
+margin_top = 24.0
+margin_right = 267.0
+margin_bottom = 44.0
+text = "IceLand"
+
+[node name="btn_StartRoad" type="Button" parent="OrdBtnLugar"]
+margin_top = 48.0
+margin_right = 267.0
+margin_bottom = 68.0
+text = "StarRoad"
+
+[node name="btn_BowserCastle" type="Button" parent="OrdBtnLugar"]
+margin_top = 72.0
+margin_right = 267.0
+margin_bottom = 92.0
+text = "Bowser Castle"
+
+[node name="btn_YoshiIsland" type="Button" parent="OrdBtnLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Yoshi Island"
+
+[node name="btn_DessertHill" type="Button" parent="OrdBtnLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Dessert Hill"
+
+[node name="btn_ToadHouse" type="Button" parent="OrdBtnLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Toad House"
+
+[node name="btn_GhostHouse" type="Button" parent="OrdBtnLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Ghost House"
+
+[node name="btn_PeachCastle" type="Button" parent="OrdBtnLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Peach Castle"
+
+[node name="btn_Ret_Lugar" type="Button" parent="OrdBtnLugar"]
+margin_top = 96.0
+margin_right = 267.0
+margin_bottom = 116.0
+text = "Regresar"
+
+[node name="CuadroAceptacion" type="AcceptDialog" parent="."]
+margin_left = 88.0
+margin_top = 196.0
+margin_right = 773.0
+margin_bottom = 464.0
+input_pass_on_modal_close_click = false
+window_title = "¡Alerta!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirmar" type="TextureButton" parent="."]
+margin_left = 672.0
+margin_top = 416.0
+margin_right = 1000.0
+margin_bottom = 464.0
+rect_pivot_offset = Vector2( 36.8267, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="Confirmar"]
+margin_top = 6.0
+margin_right = 326.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 170.314, 93.0771 )
+custom_fonts/font = SubResource( 1 )
+text = "confirmacion"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmacionFinal" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 64.0
+margin_top = 40.0
+margin_right = 965.0
+margin_bottom = 560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrdArma" type="VBoxContainer" parent="ConfirmacionFinal"]
+margin_right = 114.0
+margin_bottom = 520.0
+rect_pivot_offset = Vector2( -920, -120 )
+
+[node name="btnC_Soga" type="Button" parent="ConfirmacionFinal/OrdArma"]
+margin_right = 114.0
+margin_bottom = 20.0
+text = "Soga"
+
+[node name="btnC_Esposa" type="Button" parent="ConfirmacionFinal/OrdArma"]
+margin_top = 24.0
+margin_right = 114.0
+margin_bottom = 44.0
+text = "Esposa"
+
+[node name="btnC_Liana" type="Button" parent="ConfirmacionFinal/OrdArma"]
+margin_top = 48.0
+margin_right = 114.0
+margin_bottom = 68.0
+text = "Liana"
+
+[node name="btnC_Planta" type="Button" parent="ConfirmacionFinal/OrdArma"]
+margin_top = 72.0
+margin_right = 114.0
+margin_bottom = 92.0
+text = "Planta Carnivora"
+
+[node name="OrdPersonaje" type="VBoxContainer" parent="ConfirmacionFinal"]
+visible = false
+margin_left = 118.0
+margin_right = 118.0
+margin_bottom = 520.0
+
+[node name="btnC_Mario" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Mario"
+
+[node name="btnC_Luigi" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 24.0
+margin_right = 267.0
+margin_bottom = 44.0
+text = "Luigi"
+
+[node name="btnC_Peach" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 48.0
+margin_right = 267.0
+margin_bottom = 68.0
+text = "Peach"
+
+[node name="btnC_Toad" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 72.0
+margin_right = 267.0
+margin_bottom = 92.0
+text = "Toad"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnC_Wario" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 96.0
+margin_right = 267.0
+margin_bottom = 116.0
+text = "Wario"
+
+[node name="btnC_Yoshi" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 120.0
+margin_right = 267.0
+margin_bottom = 140.0
+text = "Yoshi"
+
+[node name="btnC_Valuigi" type="Button" parent="ConfirmacionFinal/OrdPersonaje"]
+margin_top = 144.0
+margin_right = 267.0
+margin_bottom = 164.0
+text = "Valuigi"
+
+[node name="OrdLugar" type="VBoxContainer" parent="ConfirmacionFinal"]
+visible = false
+margin_left = 122.0
+margin_right = 122.0
+margin_bottom = 520.0
+
+[node name="btnC_SeaSide" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 267.0
+margin_bottom = 20.0
+text = "Sea Side"
+
+[node name="btnC_IceLand" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_top = 24.0
+margin_right = 267.0
+margin_bottom = 44.0
+text = "IceLand"
+
+[node name="btnC_StartRoad" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_top = 48.0
+margin_right = 267.0
+margin_bottom = 68.0
+text = "StarRoad"
+
+[node name="btnC_BowserCastle" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_top = 72.0
+margin_right = 267.0
+margin_bottom = 92.0
+text = "Bowser Castle"
+
+[node name="btnC_YoshiIsland" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Yoshi Island"
+
+[node name="btnC_DessertHill" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Dessert Hill"
+
+[node name="btnC_ToadHouse" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Toad House"
+
+[node name="btnC_GhostHouse" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Ghost House"
+
+[node name="btnC_PeachCastle" type="Button" parent="ConfirmacionFinal/OrdLugar"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Peach Castle"
+
+[node name="texto" type="Label" parent="."]
+visible = false
+margin_left = 80.0
+margin_top = 88.0
+margin_right = 330.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
+text = "Arma"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValidacionLugar" type="TextureButton" parent="."]
+visible = false
+margin_left = 80.0
+margin_top = 136.0
+margin_right = 339.0
+margin_bottom = 176.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TArma" type="Label" parent="ValidacionLugar"]
+visible = false
+margin_right = 250.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto2" type="Label" parent="."]
+visible = false
+margin_left = 400.0
+margin_top = 88.0
+margin_right = 650.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
+text = "Personaje"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValidacionLugar2" type="TextureButton" parent="."]
+visible = false
+margin_left = 384.0
+margin_top = 141.876
+margin_right = 643.0
+margin_bottom = 181.876
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TPersonaje" type="Label" parent="ValidacionLugar2"]
+margin_left = -296.0
+margin_top = -61.876
+margin_right = -46.0
+margin_bottom = -21.876
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto3" type="Label" parent="."]
+visible = false
+margin_left = 712.0
+margin_top = 80.0
+margin_right = 962.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 1 )
+text = "Lugar"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ValidacionLugar3" type="TextureButton" parent="."]
+visible = false
+margin_left = 702.0
+margin_top = 136.0
+margin_right = 961.0
+margin_bottom = 176.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TLugar" type="Label" parent="ValidacionLugar3"]
+visible = false
+margin_left = 10.0
+margin_top = -4.0
+margin_right = 260.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Arma" to="." method="_on_Arma_pressed"]
+[connection signal="pressed" from="Personaje" to="." method="_on_Personaje_pressed"]
+[connection signal="pressed" from="Lugar" to="." method="_on_Lugar_pressed"]
+[connection signal="pressed" from="OrdBtnArma/btn_Soga" to="." method="_on_btn_Soga_pressed"]
+[connection signal="pressed" from="OrdBtnArma/btn_Esposa" to="." method="_on_btn_Esposa_pressed"]
+[connection signal="pressed" from="OrdBtnArma/btn_Liana" to="." method="_on_btn_Liana_pressed"]
+[connection signal="pressed" from="OrdBtnArma/btn_Planta" to="." method="_on_btn_Planta_pressed"]
+[connection signal="pressed" from="OrdBtnArma/btn_Ret_Arma" to="." method="_on_btn_Ret_Arma_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Mario" to="." method="_on_btn_Mario_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Luigi" to="." method="_on_btn_Luigi_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Peach" to="." method="_on_btn_Peach_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Toad" to="." method="_on_btn_Toad_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Wario" to="." method="_on_btn_Wario_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Yoshi" to="." method="_on_btn_Yoshi_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Valuigi" to="." method="_on_btn_Valuigi_pressed"]
+[connection signal="pressed" from="OrdBtPersonaje/btn_Ret_Per" to="." method="_on_btn_Ret_Per_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_SeaSide" to="." method="_on_btn_SeaSide_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_IceLand" to="." method="_on_btn_IceLand_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_StartRoad" to="." method="_on_btn_StartRoad_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_BowserCastle" to="." method="_on_btn_BowserCastle_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_YoshiIsland" to="." method="_on_btn_YoshiIsland_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_DessertHill" to="." method="_on_btn_DessertHill_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_ToadHouse" to="." method="_on_btn_ToadHouse_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_GhostHouse" to="." method="_on_btn_GhostHouse_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_PeachCastle" to="." method="_on_btn_PeachCastle_pressed"]
+[connection signal="pressed" from="OrdBtnLugar/btn_Ret_Lugar" to="." method="_on_btn_Ret_Lugar_pressed"]
+[connection signal="pressed" from="Confirmar" to="." method="_on_Confirmar_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdArma/btnC_Soga" to="." method="_on_btnC_Soga_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdArma/btnC_Esposa" to="." method="_on_btnC_Esposa_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdArma/btnC_Liana" to="." method="_on_btnC_Liana_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdArma/btnC_Planta" to="." method="_on_btnC_Planta_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Mario" to="." method="_on_btnC_Mario_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Luigi" to="." method="_on_btnC_Luigi_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Peach" to="." method="_on_btnC_Peach_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Toad" to="." method="_on_btnC_Toad_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Wario" to="." method="_on_btnC_Wario_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Yoshi" to="." method="_on_btnC_Yoshi_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdPersonaje/btnC_Valuigi" to="." method="_on_btnC_Valuigi_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_SeaSide" to="." method="_on_btnC_SeaSide_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_IceLand" to="." method="_on_btnC_IceLand_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_StartRoad" to="." method="_on_btnC_StartRoad_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_BowserCastle" to="." method="_on_btnC_BowserCastle_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_YoshiIsland" to="." method="_on_btnC_YoshiIsland_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_DessertHill" to="." method="_on_btnC_DessertHill_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_ToadHouse" to="." method="_on_btnC_ToadHouse_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_GhostHouse" to="." method="_on_btnC_GhostHouse_pressed"]
+[connection signal="pressed" from="ConfirmacionFinal/OrdLugar/btnC_PeachCastle" to="." method="_on_btnC_PeachCastle_pressed"]

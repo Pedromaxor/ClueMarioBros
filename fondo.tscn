@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://fondo.jpg" type="Texture" id=1]
+[ext_resource path="res://Super Mario Bros. - Overworld Theme_160k.mp3" type="AudioStream" id=2]
+[ext_resource path="res://botones fondo.jpg" type="Texture" id=3]
+[ext_resource path="res://fondo.gd" type="Script" id=4]
+[ext_resource path="res://super_mario_256/SuperMario256.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Reglas.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://super_mario_256/SuperMario256.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 300
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="Inicio" type="Sprite"]
+pause_mode = 2
+position = Vector2( 510.35, 296.273 )
+scale = Vector2( 0.26569, 0.277903 )
+offset = Vector2( 1, 1 )
+script = ExtResource( 4 )
+scn_regla = ExtResource( 6 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( -7.73157, 41.9689 )
+texture = ExtResource( 1 )
+offset = Vector2( 1, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Titulo" type="Label" parent="."]
+anchor_top = -0.214
+anchor_right = 1.0
+anchor_bottom = 0.457
+margin_left = -1854.87
+margin_top = -447.49
+margin_right = 1914.13
+margin_bottom = -131.161
+input_pass_on_modal_close_click = false
+size_flags_horizontal = 0
+custom_fonts/font = SubResource( 2 )
+text = "Mario Bros Clue"
+align = 1
+valign = 1
+autowrap = true
+max_lines_visible = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fondo musicas" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Boton" type="TextureButton" parent="."]
+anchor_left = 887.938
+anchor_top = 81.391
+anchor_right = 1829.69
+anchor_bottom = 290.703
+margin_left = -1581.94
+margin_top = 364.112
+margin_right = -1640.69
+margin_bottom = 420.8
+input_pass_on_modal_close_click = false
+action_mode = 0
+texture_normal = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="Boton"]
+anchor_top = -0.0241038
+anchor_bottom = -0.0241038
+margin_left = 142.496
+margin_top = 59.7788
+margin_right = 742.496
+margin_bottom = 218.779
+custom_fonts/font = SubResource( 3 )
+text = "Iniciar"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Boton" to="." method="_on_Boton_pressed"]

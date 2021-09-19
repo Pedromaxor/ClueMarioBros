@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://VideoInicio.gd" type="Script" id=1]
+[ext_resource path="res://arranque-recortado.ogv" type="VideoStream" id=2]
+[ext_resource path="res://Juego.tscn" type="PackedScene" id=3]
+
+[node name="panel" type="Node2D"]
+script = ExtResource( 1 )
+scn_juego = ExtResource( 3 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1022.0
+margin_bottom = 601.0
+input_pass_on_modal_close_click = false
+stream = ExtResource( 2 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

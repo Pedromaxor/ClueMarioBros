@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://negro.jpg" type="Texture" id=1]
+[ext_resource path="res://Reglas.gd" type="Script" id=2]
+[ext_resource path="res://super_mario_256/SuperMario256.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://botones fondo.jpg" type="Texture" id=4]
+[ext_resource path="res://VideoInicio.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://super_mario_256/SuperMario256.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Diseño" type="Node2D"]
+position = Vector2( 0.667419, 6.6742 )
+script = ExtResource( 2 )
+scn_video = ExtResource( 5 )
+
+[node name="negro" type="Sprite" parent="."]
+position = Vector2( 514.514, 299.677 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Texto" type="RichTextLabel" parent="."]
+margin_left = 70.2318
+margin_top = 32.2107
+margin_right = 952.474
+margin_bottom = 545.211
+input_pass_on_modal_close_click = false
+custom_fonts/normal_font = SubResource( 2 )
+text = "estas son las reglas
+1.- tienes 7 preguntas
+2.- si repites una es problema tuyo
+3.- divertirte
+Que consiste el juego
+tendras un menu donde tendras pistas para identificar al sospechoso
+
+para ponerte en contexto debes de buscar quien fue el culpable de hacerle daññno a las tortugas"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonInicio" type="TextureButton" parent="."]
+margin_left = 353.537
+margin_top = 436.68
+margin_right = 672.537
+margin_bottom = 523.68
+action_mode = 0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto" type="Label" parent="BotonInicio"]
+margin_left = 2.0
+margin_top = -3.77552
+margin_right = 318.0
+margin_bottom = 85.2244
+custom_fonts/font = SubResource( 3 )
+text = "Inicio"
+align = 1
+valign = 2
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="BotonInicio" to="." method="_on_BotonInicio_pressed"]
